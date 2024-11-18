@@ -15,6 +15,8 @@ void countAndSortCharacters(const std::string& text) {
 
     std::sort(freqVector.begin(), freqVector.end(),[](const auto& a, const auto& b) { return a.second > b.second; });
 
+    std::cout << "[OUT]: " << std::endl;
+
     for (const auto& pair : freqVector) {
         std::cout << pair.first << ": " << pair.second << std::endl;
     }
@@ -22,6 +24,7 @@ void countAndSortCharacters(const std::string& text) {
 
 int main() {
     std::string inputText;
+    std::cout << "[IN]: ";
     std::getline(std::cin, inputText);
     countAndSortCharacters(inputText);
     return 0;
